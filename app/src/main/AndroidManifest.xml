@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Xml_prac"
         tools:targetApi="31">
         <activity
+            android:name=".MpLineChartActivity"
+            android:exported="true" />
+        <activity
+            android:name=".LineChartActivity"
+            android:exported="true" />
+        <activity
             android:name=".PieChartActivity"
             android:exported="true" />
         <activity
