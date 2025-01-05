@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.example.xml_prac"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.xml_prac"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -33,7 +33,7 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
-    buildFeatures{
+    buildFeatures {
         viewBinding = true
     }
 }
@@ -45,7 +45,12 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.firebase.crashlytics.buildtools)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+
+    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
+    implementation("com.google.code.gson:gson:2.8.9")
 }
