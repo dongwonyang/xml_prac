@@ -4,6 +4,7 @@ import android.graphics.Color
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -17,7 +18,6 @@ class MpLineChartActivity : AppCompatActivity() {
     private val binding by lazy {
         ActivityMpLineChartBinding.inflate(layoutInflater)
     }
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,6 +54,11 @@ class MpLineChartActivity : AppCompatActivity() {
 
             setDrawValues(false)
             setDrawIcons(true)
+
+            circleRadius = 5.0F
+            setCircleColor(ContextCompat.getColor(this@MpLineChartActivity, R.color.black))
+            circleHoleRadius = 1.0F
+            circleHoleColor = ContextCompat.getColor(this@MpLineChartActivity, R.color.white)
         }
 
         // 데이터 설정
@@ -81,7 +86,7 @@ class MpLineChartActivity : AppCompatActivity() {
                 axisLineColor = Color.TRANSPARENT
                 textColor = Color.TRANSPARENT
             }
-            axisRight.apply{
+            axisRight.apply {
                 setDrawGridLines(false)
                 setDrawAxisLine(false)
                 axisLineColor = Color.TRANSPARENT
